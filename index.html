@@ -102,8 +102,9 @@
         <button onclick="calcular()">Calcular</button>
         
         <div class="resultado" id="resultado">
-            <p><strong>Valor descontado:</strong> <span id="valorDescontado"></span></p>
-            <p><strong>Valor que sobra após desconto:</strong> <span id="valorComDesconto"></span></p>
+            <p><strong>Se você receber:</strong> <span id="valorOriginal"></span></p>
+            <p><strong>Será descontado:</strong> <span id="valorDescontado"></span></p>
+            <p><strong>E sobra após desconto:</strong> <span id="valorComDesconto"></span></p>
             <h2>Como faço para receber o valor original?</h2>
             <p><strong>Cobre o valor de:</strong> <span id="valorBruto"></span></p>
             <p><strong>Terá desconto de:</strong> <span id="valorBrutoDesconto"></span></p>
@@ -141,6 +142,7 @@
                 currency: 'BRL'
             });
 
+            document.getElementById('valorOriginal').textContent = formatoMoeda.format(valor);
             document.getElementById('valorDescontado').textContent = formatoMoeda.format(valorDescontado);
             document.getElementById('valorComDesconto').textContent = formatoMoeda.format(valorComDesconto);
             document.getElementById('valorBruto').textContent = formatoMoeda.format(valorBruto);
