@@ -80,7 +80,7 @@
             width: 100%;
             text-align: center;
             font-family: "Impact", "Arial Black", sans-serif;
-            font-size: 50px;
+            font-size: 48px;
             font-weight: 900;
             color: white;
             background-color: transparent;     /* sem fundo/sombra em volta */
@@ -96,7 +96,7 @@
     <div class="container">
         <h1>Calculadora de PIX para 2026</h1>
         
-        <label for="valor">Valor desejado em reais (R$):</label>
+        <label for="valor">Valor a receber em reais (R$):</label>
         <input type="number" id="valor" step="0.01" min="0" placeholder="Ex: 1000.00">
         
         <button onclick="calcular()">Calcular</button>
@@ -149,7 +149,7 @@
             document.getElementById('valorBrutoDesconto').textContent = formatoMoeda.format(valorBrutoDesconto);
             document.getElementById('valorBrutoFinal').textContent = formatoMoeda.format(valorBrutoFinal);
 
-            document.getElementById('textoMeme').textContent = formatoMoeda.format(valorDescontado)+" É MEU";
+            document.getElementById('textoMeme').textContent = "Quero os meus "+formatoMoeda.format(valorDescontado);
             document.getElementById('memeContainer').style.display = 'block';
 
             document.getElementById('resultado').style.display = 'block';
