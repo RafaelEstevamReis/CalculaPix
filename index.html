@@ -61,22 +61,23 @@
         }
 
         .meme-container {
-            margin-top: 50px;
+            margin-top: 25px;
             position: relative;
             width: 100%;
             max-width: 600px;
-            height: 470px; /* ajuste conforme o tamanho do seu meme.png */
+            height: 530px; /* ajuste conforme o tamanho do seu meme.png */
             background-image: url('meme.png');
             background-size: contain;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             display: none;
         }
 
         .texto-sobreposto {
             position: absolute;
             left: 0px;
-            top: 390px;
+            /* top: 390px; */
+            bottom: 0px;
             width: 100%;
             text-align: center;
             font-family: "Impact", "Arial Black", sans-serif;
@@ -112,7 +113,7 @@
         </div>
 
         <div class="meme-container" id="memeContainer">
-            <div class="texto-sobreposto" id="textoMeme">R$ ∞ É MEU</div>
+            <div class="texto-sobreposto" id="textoMeme"></div>
         </div>
 
     </div>
@@ -149,7 +150,7 @@
             document.getElementById('valorBrutoDesconto').textContent = formatoMoeda.format(valorBrutoDesconto);
             document.getElementById('valorBrutoFinal').textContent = formatoMoeda.format(valorBrutoFinal);
 
-            document.getElementById('textoMeme').textContent = "Quero os meus "+formatoMoeda.format(valorDescontado);
+            // document.getElementById('textoMeme').textContent = formatoMoeda.format(valorDescontado);
             document.getElementById('memeContainer').style.display = 'block';
 
             document.getElementById('resultado').style.display = 'block';
